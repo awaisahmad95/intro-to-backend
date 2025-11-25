@@ -11,8 +11,8 @@ const startServer = async () => {
         await connectDB();
 
         app.on('mount', (error) => {
-             console.error('ERROR:', error);
-             throw error;
+            console.error('ERROR:', error);
+            throw error;
         });
 
         app.listen(process.env.PORT, () => {
@@ -23,4 +23,5 @@ const startServer = async () => {
     }
 }
 
-startServer().then(r => {});
+startServer().then(r => {
+});

@@ -70,7 +70,7 @@ const logoutUser = async (req, res, next) => {
     try {
         const {email} = req.body;
 
-        const  user = await User.findOne({email: email.toLowerCase()});
+        const user = await User.findOne({email: email.toLowerCase()});
 
         if (!user) {
             return res.status(404).json({message: "User not found"});
